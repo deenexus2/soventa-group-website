@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ service.title }} | SOVENTA DIGITAL
+{% endblock %}
+
+
+{% block content %}
+
+<section class="service-hero">
+
+    <div class="container">
+
+        <span class="eyebrow">{{ service.category }}</span>
+
+        <h1>{{ service.title }}</h1>
+
+        <p>{{ service.description }}</p>
+
+        <a href="{{ url_for('home') }}#contact"
+           class="btn btn-primary">
+            Request This Service
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+
+    <div class="container service-content">
+
+        <div class="service-intro">
+
+            <span class="eyebrow">OVERVIEW</span>
+
+            <h2>How We Can Help</h2>
+
+            <p>{{ service.intro }}</p>
+
+        </div>
+
+
+
+        <div class="service-detail-grid">
+
+            <div class="service-detail-card">
+
+                <h2>What We Offer</h2>
+
+                <ul>
+
+                    {% for item in service.offers %}
+
+                    <li>{{ item }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="service-detail-card">
+
+                <h2>Potential Benefits</h2>
+
+                <ul>
+
+                    {% for item in service.benefits %}
+
+                    <li>{{ item }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-cta">
+
+            <h2>Let's Discuss Your Project</h2>
+
+            <p>
+                Tell us what you need and let's explore
+                a suitable solution.
+            </p>
+
+            <a href="{{ url_for('home') }}#contact"
+               class="btn btn-primary">
+                Contact SOVENTA
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

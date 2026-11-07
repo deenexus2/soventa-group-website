@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Enquiry Received | SOVENTA GROUP
+{% endblock %}
+
+
+{% block content %}
+
+<section class="success-section">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <span class="eyebrow">THANK YOU</span>
+
+        <h1>Your Enquiry Has Been Saved!</h1>
+
+        <p>
+            Thank you for contacting SOVENTA GROUP.
+            Your enquiry has been saved successfully.
+        </p>
+
+        <p>
+            You can also send your enquiry directly
+            to our WhatsApp for follow-up.
+        </p>
+
+
+        <a href="{{ whatsapp_url }}"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary">
+            Continue to WhatsApp
+        </a>
+
+
+        <a href="{{ url_for('home') }}"
+           class="text-link">
+            Return to Homepage
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
